@@ -27,4 +27,6 @@
 **Create image Docker**
 ```
     docker build -t dev-python-script .
+    RUM:
+    docker run --rm -d python-script:latest
 ```

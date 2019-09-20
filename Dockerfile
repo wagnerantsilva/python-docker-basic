@@ -14,9 +14,9 @@ RUN pip install --upgrade pip
 RUN apt-get update \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
-ADD requirements.txt /application/
+COPY requirements.txt /application/
 
-ADD src/script.py /application/
+COPY src/ /application/
 
 RUN pip install -r /application/requirements.txt
 # CMD diz ao Docker para executar o comando quando a imagem é carregada. No exemplo, nosso script python.
