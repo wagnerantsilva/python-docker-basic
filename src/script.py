@@ -10,3 +10,5 @@ house = [200, 325,789,985,1025,1027,1029]
 adress = Endereco()
 for i in house:
     print(adress.myAdress(i))
+    
+

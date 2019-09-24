@@ -19,7 +19,9 @@ COPY requirements.txt /application/
 COPY src/ /application/
 
 RUN pip install -r /application/requirements.txt
+
+RUN pip install schedule
 # CMD diz ao Docker para executar o comando quando a imagem é carregada. No exemplo, nosso script python.
-CMD [ "python", "script.py" ]
+CMD [ "python", "app.py" ]
 
 
